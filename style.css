@@ -1,0 +1,104 @@
+:root {
+  --isu-red: rgb(200, 16, 46);
+
+  --isu-beige-1: rgb(241, 190, 72);  /* Pantone 142 C */
+  --isu-beige-2: rgb(155, 148, 95);  /* Pantone 451 C */
+  --isu-beige-3: rgb(202, 199, 167); /* Pantone 454 C */
+
+  --isu-brown: rgb(82, 71, 39);      /* Pantone 449 C */
+}
+
+body {
+    background-color: #fafafa;
+    display: grid;
+    justify-items: center;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1, h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+p {
+    /* max-width: 75ch; */
+    margin: 10px;
+    font-family: Times, "Times New Roman", serif;
+    line-height: 1.75;
+    font-size: 18px;
+}
+
+.textWrapper {
+    display: grid;
+    justify-items: center;
+    max-width: 720px;
+}
+
+/* FIRST CHART */
+
+#svgAffordWrapper {
+    display: grid;
+    justify-self: center;
+    /* background-color: var(--isu-beige-3); */
+    width: 50vw;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+#median-income {
+    fill: #7A7466;
+}
+
+#median-house-value {
+    fill: #E8E3D5;
+}
+
+.rect-label {
+    font-style: italic;
+    /* font-weight: bold; */
+    font-size: .25em;
+}
+
+.lab-gap {
+    font-size: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SECOND CHART */
+
+#svgUnitsWrapper {
+    display: grid;
+    justify-self: center;
+    /* background-color: var(--isu-beige-3); */
+    width: 50vw;
+}
+
+#signage {
+    cursor: pointer;
+}
+
+
+/* THIRD CHART */
+
+#svgMapWrapper {
+    display: grid;
+    justify-self: center;
+    /* background-color: var(--isu-beige-3); */
+    width: 50vw;
+}
+
+.arc, .shadow {
+    pointer-events: none;
+}
+

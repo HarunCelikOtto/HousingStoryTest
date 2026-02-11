@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="textWrapper">
+        <h1>Housing and the Cost of Living</h1>
+        <p>
+            Housing costs are rising—but for most people, incomes aren't keeping up. In communities across the country, the gap between what households earn and what it costs to live there is widening, making housing affordability an increasingly urgent challenge. Tracking the divergence between median income and housing costs reveals why so many households feel squeezed, even in places once considered affordable.
+        </p>
+
+        <p>
+            As prices climb faster than wages, housing increasingly demands a larger share of household income, leaving less room for savings, healthcare, education, and other essentials. This shift affects not only those struggling to enter the housing market, but also long-time residents facing rent increases, displacement, or longer commutes. Examining these trends at the community level helps clarify how affordability pressures are reshaping who can live where—and what that means for the long-term stability of neighborhoods.
+        </p>
+
+        <h2 id="rect-trigger">When Housing Outpaces Income</h2>
+
+        <p>
+            Housing is typically the largest expense in a household budget. As prices rise faster than wages, it consumes a growing share of monthly income, leaving less flexibility elsewhere. For many households, this means postponing savings, cutting back on healthcare, or taking on additional debt to stay afloat.
+
+            The shift is especially pronounced among renters, who tend to have lower incomes and fewer financial buffers. Even modest rent increases can tip a household from stability into precarity, forcing difficult trade-offs that ripple through daily life.
+        </p>
+    </div>
+
+    <div id="svgAffordWrapper">
+        <svg id="chart1" viewBox="0 0 100 50" transform="translate(0, 15)" xmlns="http://www.w3.org/2000/svg">
+
+            <g id="income-group" transform="translate(0,5)">
+                <!-- Animate width to 40 -->
+                <rect id="median-income" width="0" height="5" x="0" y="0" rx="1"></rect> 
+                
+                <text id="lab-med-income" class="rect-label" x="0" y="9">Median Income</text>
+                <text id="lab-med-number" class="rect-label" x="0" y="9" dy="1.2em" font-style="italic">$1,600</text>
+            </g>    
+                
+            <g id="house-group">    
+                <!-- Animate x(100,60) might need to animate both width and x though -->
+                <rect id="median-house-value" width="100" height="5" x="100" y="25" rx="1"></rect>
+            
+                <text id="lab-med-house-value" class="rect-label" x="64" y="34" fill="black">Median House Value*</text>
+                <text id="lab-med-house-number" class="rect-label" x="64" y="34" dy="1.2em"fill="black">$3,000</text>
+            </g>
+                
+            <g id="gap-group" transform="translate(5 -15) rotate(270 30 30)">
+                <!-- <text class="lab-gap" x="0" y="30">The</text> -->
+                <text class="lab-gap" x="3" y="30" dy="1em">Affordability</text>
+                <text class="lab-gap" x="12" y="30" dy="2em">Gap</text>
+            </g>
+        </svg>
+        *Broken down into X number of years.
+    </div>
+
+
+    <div class="textWrapper">
+        <h2>The State of Housing Units</h2>
+        <p>
+            While rising housing costs are a familiar story, the picture becomes more nuanced when we look at the composition of housing stock itself—specifically, the balance between occupied and vacant units. Across the country, many communities face a paradox: homes exist, but they are not necessarily accessible to those who need them most. According to recent census data, a significant portion of vacant units are not “for sale” or “for rent” but are instead held off the market for seasonal use, investment purposes, or even speculative holding.
+        </p>
+
+        <p>
+            In cities with rapidly escalating rents, the vacancy rate for rental units can be deceptively low, signaling tight competition for housing even when overall vacancy appears moderate. For example, a neighborhood might report a 5% vacancy rate, but if most of those units are short-term rentals or second homes, the effective availability for local residents is far lower. This mismatch exacerbates affordability pressures, as demand outstrips the supply of genuinely available homes.
+        </p>
+
+        <p>
+            Occupied units, meanwhile, reveal the human impact of these trends. Households increasingly stretch their budgets to remain in place, often taking on multiple roommates, occupying smaller spaces, or forgoing other essentials to cover rent or mortgage payments. Long-term residents may face displacement as property owners capitalize on high demand, while new residents encounter barriers to entry that reshape the socioeconomic makeup of neighborhoods.
+        
+            Ultimately, understanding the interplay between occupied and vacant units is critical to grasping the full scope of the housing affordability crisis. It is not just about how many homes exist, but about who can access them—and at what cost. Tracking these patterns over time offers a window into the evolving geography of opportunity and the communities at risk of being priced out.
+        </p>
+    </div>
+
+    <div id="svgUnitsWrapper">
+      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.34 132.91">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #6d903c;
+            }
+          
+            .cls-2 {
+              letter-spacing: 0em;
+            }
+          
+            .cls-3, .cls-4 {
+              fill: #fff;
+            }
+          
+            .cls-5 {
+              stroke-linecap: round;
+            }
+          
+            .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12 {
+              stroke: #000;
+            }
+          
+            .cls-5, .cls-11 {
+              fill: #c86d50;
+              stroke-linejoin: round;
+              stroke-width: 3px;
+            }
+          
+            .cls-4 {
+              font-size: 3.97px;
+            }
+          
+            .cls-4, .cls-13, .cls-14 {
+              font-family: MyriadPro-Regular, 'Myriad Pro';
+            }
+          
+            .cls-15 {
+              fill: #a17649;
+            }
+          
+            .cls-16 {
+              letter-spacing: 0em;
+            }
+          
+            .cls-6, .cls-7 {
+              fill: none;
+            }
+          
+            .cls-6, .cls-7, .cls-17, .cls-18, .cls-8, .cls-9, .cls-10, .cls-12 {
+              stroke-miterlimit: 10;
+            }
+          
+            .cls-6, .cls-9 {
+              stroke-width: 2px;
+            }
+          
+            .cls-7, .cls-12 {
+              stroke-width: .25px;
+            }
+          
+            .cls-19 {
+              letter-spacing: 0em;
+            }
+          
+            .cls-13 {
+              font-size: 5.24px;
+            }
+          
+            .cls-13, .cls-18 {
+              fill: #c8102e;
+            }
+          
+            .cls-17 {
+              fill: #f1be48;
+              stroke: #a17649;
+            }
+          
+            .cls-17, .cls-18, .cls-8 {
+              stroke-width: .5px;
+            }
+          
+            .cls-20 {
+              fill: #E8E3D5;
+            }
+          
+            .cls-14 {
+              font-size: 12px;
+            }
+          
+            .cls-18 {
+              stroke: #90102e;
+            }
+          
+            .cls-21 {
+              letter-spacing: -.03em;
+            }
+          
+            .cls-22 {
+              letter-spacing: -.03em;
+            }
+          
+            .cls-8, .cls-12 {
+              fill: #d8b07c;
+            }
+          
+            .cls-9 {
+              fill: #2d6b6a;
+            }
+          
+            .cls-23 {
+              fill: #537334;
+            }
+          
+            .cls-10 {
+              fill: #9d6e5a;
+            }
+          </style>
+        </defs>
+        <g id="house_body">
+          <g id="building_body_wide">
+            <rect class="cls-20" x="32.01" y="64.68" width="55.64" height="55.64"/>
+          </g>
+          <g id="building_body_tall">
+            <rect class="cls-20" x="87.65" y="83.66" width="55.92" height="36.67"/>
+          </g>
+          <polygon id="building_top" class="cls-20" points="59.83 49.42 87.65 64.68 32.01 64.68 59.83 49.42"/>
+        </g>
+        <g id="house_foundation">
+          <rect id="foundation_bar" class="cls-6" x="31.29" y="113.33" width="112.28" height="6"/>
+          <line id="foundation_line" class="cls-6" x1="87.65" y1="83.66" x2="87.65" y2="113.33"/>
+          <line id="foundation_line-2" data-name="foundation_line" class="cls-6" x1="31.29" y1="65.26" x2="31.29" y2="113.33"/>
+          <line id="foundation_line-3" data-name="foundation_line" class="cls-6" x1="17.85" y1="119.32" x2="152.22" y2="119.32"/>
+          <line id="foundation_line-4" data-name="foundation_line" class="cls-6" x1="143.57" y1="83.66" x2="143.57" y2="113.33"/>
+        </g>
+        <g id="house_windows">
+          <g id="big_window">
+            <path id="glass" class="cls-9" d="M60.22,103.29h19.88v-21.26s-4.8-15.52-19.88-15.39c-15.08-.13-19.88,15.39-19.88,15.39v21.26h19.88"/>
+            <line id="frame" class="cls-6" x1="52.3" y1="68.23" x2="52.3" y2="103.29"/>
+            <line id="frame-2" data-name="frame" class="cls-6" x1="68.75" y1="68.33" x2="68.75" y2="103.39"/>
+            <line id="frame-3" data-name="frame" class="cls-6" x1="40.35" y1="82.03" x2="80.1" y2="82.03"/>
+            <line id="frame-4" data-name="frame" class="cls-6" x1="38.3" y1="103.29" x2="82.13" y2="103.29"/>
+            <line id="frame-5" data-name="frame" class="cls-6" x1="40.35" y1="93.97" x2="80.1" y2="93.97"/>
+          </g>
+          <g id="small_window">
+            <rect id="glass-2" data-name="glass" class="cls-9" x="120.31" y="91.43" width="14.87" height="13.3"/>
+            <line id="frame-6" data-name="frame" class="cls-6" x1="120.31" y1="98.08" x2="135.18" y2="98.08"/>
+          </g>
+        </g>
+        <g id="house_door">
+          <rect id="door_body" class="cls-10" x="99.05" y="91.43" width="13.21" height="20.48"/>
+          <rect id="door_knob" class="cls-10" x="109.03" y="100.95" width="1.66" height="1.66"/>
+        </g>
+        <g id="house_roof">
+          <polygon id="wide_roof" class="cls-11" points="149.31 83.66 87.65 83.66 87.65 60.11 141.09 60.11 149.31 83.66"/>
+          <polygon id="wide_roof-2" data-name="wide_roof" class="cls-11" points="149.31 83.41 87.65 83.41 87.65 59.87 141.09 59.87 149.31 83.41"/>
+          <polyline id="tall_roof" class="cls-5" points="59.83 36.83 95.57 60.11 95.57 70.42 87.65 64.68 59.83 49.42 32.01 64.68 24.88 70.42 24.88 59.59 59.83 36.83"/>
+        </g>
+        <g id="boards">
+          <g id="plank_forward">
+            <polygon id="plank" class="cls-8" points="100.08 107.72 115.8 97.53 115.37 96.9 114.45 97.35 114.99 96.53 113.06 94.34 112.49 94.58 112.85 93.93 112.23 93.31 97.11 102.6 99.23 106.47 100.5 106.24 99.65 107.09 100.08 107.72"/>
+            <circle id="bolt" class="cls-12" cx="106.82" cy="101.27" r=".26"/>
+            <circle id="bolt-2" data-name="bolt" class="cls-12" cx="105.72" cy="99.47" r=".26"/>
+          </g>
+          <g id="plank-2" data-name="plank">
+            <polygon id="plank_backward" class="cls-8" points="99.6 92.81 115.32 103 114.89 103.63 113.97 103.18 114.51 104 112.58 106.18 112.01 105.95 112.38 106.59 111.75 107.22 96.63 97.93 98.75 94.05 100.03 94.29 99.17 93.44 99.6 92.81"/>
+            <circle id="bolt-3" data-name="bolt" class="cls-12" cx="106.35" cy="99.26" r=".26"/>
+            <circle id="bolt-4" data-name="bolt" class="cls-12" cx="105.24" cy="101.06" r=".26"/>
+          </g>
+          <polygon id="plank_backward-2" data-name="plank_backward" class="cls-8" points="40.11 70.76 86.25 101.58 85.81 102.24 83.24 100.68 85.25 102.51 82.66 104.37 81.12 103.48 82.55 104.86 81.64 105.33 37.71 76.52 39.24 72.05 42.44 73.58 39.67 71.41 40.11 70.76"/>
+          <g id="plank-3" data-name="plank">
+            <polygon id="plank_forward-2" data-name="plank_forward" class="cls-8" points="35.99 102.25 82.13 71.43 81.68 70.77 79.11 72.34 81.13 70.5 78.53 68.64 76.99 69.54 78.42 68.15 77.51 67.68 33.58 96.49 35.11 100.96 38.32 99.43 35.54 101.6 35.99 102.25"/>
+            <circle id="bolt-5" data-name="bolt" class="cls-12" cx="37.1" cy="98.82" r=".26"/>
+            <circle id="bolt-6" data-name="bolt" class="cls-12" cx="36.18" cy="97.45" r=".26"/>
+            <circle id="bolt-7" data-name="bolt" class="cls-12" cx="77.31" cy="72.76" r=".26"/>
+            <circle id="bolt-8" data-name="bolt" class="cls-12" cx="76.39" cy="71.38" r=".26"/>
+          </g>
+        </g>
+        <g id="signage">
+          <g id="Post">
+            <rect id="post_vertical" class="cls-15" x="2.11" y="99.62" width="1.76" height="21.24"/>
+            <rect id="post_horizontal" class="cls-15" x="9.1" y="91.78" width="1.76" height="19.96" transform="translate(-91.78 111.75) rotate(-90)"/>
+            <line id="hanger" class="cls-7" x1="8.26" y1="102.64" x2="8.26" y2="103.85"/>
+            <line id="hanger-2" data-name="hanger" class="cls-7" x1="16.05" y1="102.64" x2="16.05" y2="103.85"/>
+          </g>
+          <g id="vacant_signage">
+            <rect id="vacant_board" class="cls-18" x="4.84" y="103.85" width="15.12" height="8.66"/>
+            <text id="vacant_text" class="cls-4" transform="translate(6.73 109.44)" x="0" y="0">Vacant</text>
+          </g>
+          <g id="sold_signage">
+            <rect id="vacant_board-2" data-name="vacant_board" class="cls-17" x="4.84" y="103.85" width="15.12" height="8.66"/>
+            <text id="sold_text" class="cls-13" transform="translate(6.74 108.28)" x="0" y="0">Sold!</text>
+            <rect id="pricing" class="cls-3" x="5.07" y="109.01" width="14.64" height="3.24"/>
+          </g>
+        </g>
+        <g id="click_me">
+          <text id="click_text" transform="translate(0 90)" font-size="4" fill="gray" x="0" y="0">Click the Sign</text>
+          <g id="click_arrow" transform="translate(0 90) scale(0.07) rotate(-10)">
+            <path style="fill: none; stroke: gray; stroke-linecap: round; stroke-width: 5px;" d="M 163.19 58.896 C 88.753 48.262 63.395 74.438 87.117 137.423"></path>
+            <path d="M -112.272 -164.42 L -96.935 -135.586 L -127.61 -135.586 L -112.272 -164.42 Z" bx:shape="triangle -127.61 -164.42 30.675 28.834 0.5 0 1@798e8f4e" style="fill: gray; paint-order: fill; stroke-opacity: 0; transform-origin: -112.271px -150px 0px;" transform="matrix(-0.882947, 0.469472, -0.469472, -0.882947, 207.364071, 300.000039)"></path>
+          </g>
+        </g>
+        <g id="stats">
+          <text id="title_text" font-size="12px" transform="translate(0 10.04)" x="0" y="0">Vacant Housing</text>
+        </g>
+        <g id="hedges">
+          <g id="light_hedge">
+            <path class="cls-1" d="M85.23,132.9s-.39-20.65,21.65-20.65,20.86,20.65,20.86,20.65h-42.51Z"/>
+            <ellipse class="cls-1" cx="119.51" cy="121.18" rx="7.31" ry="7.76" transform="translate(-8.79 9.35) rotate(-4.32)"/>
+            <ellipse class="cls-1" cx="101.11" cy="118.74" rx="7.31" ry="7.76" transform="translate(-8.66 7.96) rotate(-4.32)"/>
+          </g>
+          <g id="light_hedge-2" data-name="light_hedge">
+            <path class="cls-1" d="M52.21,132.9s-.38-20.2,21.17-20.2,20.41,20.2,20.41,20.2h-41.58Z"/>
+            <ellipse class="cls-1" cx="71.14" cy="117.74" rx="6.7" ry="9.62" transform="translate(-8.67 5.69) rotate(-4.32)"/>
+            <ellipse class="cls-1" cx="84.06" cy="121.75" rx="6.99" ry="9.06" transform="translate(-10.77 8.19) rotate(-5.24)"/>
+          </g>
+          <g id="dark_hedge">
+            <path class="cls-23" d="M21.6,132.9s-.48-25.24,26.46-25.24,25.5,25.24,25.5,25.24H21.6Z"/>
+            <ellipse class="cls-23" cx="33.58" cy="117.74" rx="9.06" ry="6.99" transform="translate(-86.73 140.42) rotate(-84.76)"/>
+            <ellipse class="cls-23" cx="50.34" cy="112.38" rx="8.16" ry="6.29" transform="translate(-51.12 42.6) rotate(-31.35)"/>
+          </g>
+          <g id="dark_hedge-2" data-name="dark_hedge">
+            <path class="cls-23" d="M113.36,132.91s-.42-22.33,23.41-22.33,22.56,22.33,22.56,22.33h-45.96Z"/>
+            <ellipse class="cls-23" cx="123.96" cy="119.5" rx="8.02" ry="6.19" transform="translate(-6.36 232.02) rotate(-84.76)"/>
+            <ellipse class="cls-23" cx="138.78" cy="114.76" rx="7.21" ry="5.57" transform="translate(-39.44 88.96) rotate(-31.35)"/>
+            <ellipse class="cls-23" cx="152.22" cy="122.09" rx="5.57" ry="7.21" transform="translate(-1.51 1.91) rotate(-.72)"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="textWrapper">
+        <h2>Housing Pressures Beyond County Lines</h2>
+        <p>
+            Housing markets rarely stop at administrative boundaries. When affordability tightens in one county, the effects often ripple outward, reshaping demand and displacement patterns in neighboring areas. Residents priced out of high-cost counties may relocate to nearby ones in search of lower rents or home prices, bringing population growth, increased competition, and rising housing costs with them. What begins as a localized shortage can quickly become a regional challenge.
+        </p>
+      
+        <p>
+            These spillover effects are especially visible in counties connected by commuting corridors. As workers move farther from job centers to find attainable housing, adjacent counties absorb the pressure through increased rental demand, denser occupancy, and new development—often faster than infrastructure or local planning can adapt. A county that appears stable in isolation may, in reality, be responding to housing stress generated elsewhere.
+        </p>
+      
+        <p>
+            Over time, these interconnected dynamics can amplify inequality across regions. Counties receiving displaced households may experience rising rents and land values, while those losing residents can see shifts in labor availability and community cohesion. Understanding how housing conditions in one county influence others reveals a networked system rather than a set of independent markets—highlighting the need for coordinated, regional approaches to housing policy and planning.
+        </p>
+    </div>
+
+      <div id="svgMapWrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362 300" xmlns:bx="https://boxy-svg.com">
+          <g transform="scale(0.3) translate(0, 200)">
+            <g>
+              <text id="map_title" font-size="90px" transform="translate(180 -90)" x="0" y="0">Commuting Patterns</text>
+            </g>
+            <g id="ia-map">
+              <rect id="background" width="1180" height="775.2412008984829" fill="#ffffff00" stroke="#ffffff00" stroke-width="1" stroke-opacity="1" ry="0" rx="0" y="0" x="0"></rect>
+              <path d="M215.068,6.46L227.193,6.46L312.71,6.46L323.559,6.46L398.864,6.46L433.964,6.46L484.381,6.46L543.094,6.46L570.535,6.46L651.585,6.46L656.052,6.46L742.207,6.46L760.714,6.46L827.723,6.46L890.903,6.46L913.24,6.46L978.334,6.46L983.44,26.31L1008.329,61.604L994.927,111.617L996.203,129.484L1009.605,182.957L1042.791,208.092L1077.891,216.666L1088.74,252.133L1119.373,284.472L1146.814,328.903L1180,370.177L1174.895,395.01L1161.493,427.656L1149.367,440.334L1125.116,489.136L1062.574,512.58L1025.56,515.583L1010.243,537.188L1008.967,574.327L1032.58,601.825L1030.027,632.853L1001.947,688.789L989.822,703.633L954.083,716.683L943.872,768.781L890.903,711.346L852.612,714.904L809.854,715.497L779.221,716.09L726.252,717.869L711.574,718.462L643.288,720.834L592.872,720.241L558.41,719.648L520.119,720.834L476.084,722.019L437.155,722.612L392.482,722.612L364.402,722.019L311.433,720.834L261.017,719.055L229.746,717.869L158.269,716.09L145.506,671.553L147.42,643.58L139.762,607.797L138.486,606.603L138.486,579.711L134.657,573.728L132.104,573.13L126.998,525.188L116.149,495.752L97.642,454.81L90.622,408.923L70.2,365.327L52.331,327.08L54.884,310.051L28.08,250.301L26.804,238.69L0,192.771L17.869,154.092L29.995,114.083L14.678,67.787L54.884,67.169L14.678,67.169L7.02,7.702L33.186,6.46L105.938,6.46L141.038,6.46Z" class="boundary-shadow" visibility="hidden" pointer-events="none" fill="transparent" stroke="transparent" stroke-width="0"></path>
+              <path d="M7.02,7.702L33.186,6.46L105.938,6.46L141.038,6.46L141.038,67.169L54.884,67.169L14.678,67.169Z" id="19119" class="region" data-id="19119" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M14.678,67.787L54.884,67.169L141.038,67.169L141.677,154.092L17.869,154.092L29.995,114.083Z" id="19167" class="region" data-id="19167" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M26.804,238.69L0,192.771L17.869,154.092L141.677,154.092L141.038,239.912Z" id="19149" class="region" data-id="19149" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M28.08,250.301L26.804,238.69L141.038,239.912L162.737,239.912L176.138,261.293L175.5,325.864L52.331,327.08L54.884,310.051Z" id="19193" class="region" data-id="19193" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M97.642,454.81L90.622,408.923L175.5,411.342L196.56,410.737L195.922,474.692L206.771,498.157L116.149,495.752Z" id="19085" class="region" data-id="19085" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M90.622,408.923L70.2,365.327L52.331,327.08L175.5,325.864L175.5,411.342Z" id="19133" class="region" data-id="19133" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M116.149,495.752L206.771,498.157L269.313,498.157L269.313,582.103L227.831,581.505L138.486,579.711L134.657,573.728L132.104,573.13L126.998,525.188Z" id="19155" class="region" data-id="19155" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M158.269,716.09L145.506,671.553L147.42,643.58L227.831,643.58L229.746,717.869Z" id="19071" class="region" data-id="19071" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M147.42,643.58L139.762,607.797L138.486,606.603L138.486,579.711L227.831,581.505L227.831,643.58Z" id="19129" class="region" data-id="19129" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M890.903,711.346L893.456,665.011L954.721,665.011L1001.947,688.789L989.822,703.633L954.083,716.683L943.872,768.781Z" id="19111" class="region" data-id="19111" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M711.574,718.462L643.288,720.834L642.65,644.771L726.252,644.771L726.252,717.869Z" id="19007" class="region" data-id="19007" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M779.221,716.09L726.252,717.869L726.252,644.771L809.854,644.175L809.854,715.497Z" id="19051" class="region" data-id="19051" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M852.612,714.904L809.854,715.497L809.854,644.175L893.456,644.175L893.456,665.011L890.903,711.346Z" id="19177" class="region" data-id="19177" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M261.017,719.055L229.746,717.869L227.831,643.58L310.157,644.175L311.433,720.834Z" id="19145" class="region" data-id="19145" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M364.402,722.019L311.433,720.834L310.157,644.175L393.759,644.175L392.482,722.612Z" id="19173" class="region" data-id="19173" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M592.872,720.241L558.41,719.648L559.686,644.771L642.65,644.771L643.288,720.834Z" id="19185" class="region" data-id="19185" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M437.155,722.612L392.482,722.612L393.759,644.175L476.084,644.771L476.084,722.019Z" id="19159" class="region" data-id="19159" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M520.119,720.834L476.084,722.019L476.084,644.771L559.686,644.771L558.41,719.648Z" id="19053" class="region" data-id="19053" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M913.24,6.46L978.334,6.46L983.44,26.31L1008.329,61.604L994.927,111.617L913.878,111.001Z" id="19005" class="region" data-id="19005" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M890.903,6.46L913.24,6.46L913.878,111.001L827.723,111.001L827.723,78.293L827.723,6.46Z" id="19191" class="region" data-id="19191" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M760.714,6.46L827.723,6.46L827.723,78.293L741.568,78.293L742.207,6.46Z" id="19089" class="region" data-id="19089" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M656.052,6.46L742.207,6.46L741.568,78.293L656.052,78.293L656.052,67.787Z" id="19131" class="region" data-id="19131" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M651.585,6.46L656.052,6.46L656.052,67.787L570.535,67.787L570.535,6.46Z" id="19195" class="region" data-id="19195" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M543.094,6.46L570.535,6.46L570.535,67.787L484.381,67.787L484.381,6.46Z" id="19189" class="region" data-id="19189" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M433.964,6.46L484.381,6.46L484.381,67.787L484.381,154.092L398.864,154.092L398.864,67.787L398.864,6.46Z" id="19109" class="region" data-id="19109" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M323.559,6.46L398.864,6.46L398.864,67.787L313.348,67.787L312.71,6.46Z" id="19063" class="region" data-id="19063" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M227.193,6.46L312.71,6.46L313.348,67.787L227.193,67.787Z" id="19059" class="region" data-id="19059" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M215.068,6.46L227.193,6.46L227.193,67.787L141.038,67.169L141.038,6.46Z" id="19143" class="region" data-id="19143" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M994.927,111.617L996.203,129.484L1009.605,182.957L1042.791,208.092L1000.032,219.114L913.878,219.726L913.878,111.001Z" id="19043" class="region" data-id="19043" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1042.791,208.092L1077.891,216.666L1088.74,252.133L1119.373,284.472L1084.911,305.791L1042.153,305.182L1000.032,305.182L1000.032,219.114Z" id="19061" class="region" data-id="19061" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1119.373,284.472L1146.814,328.903L1180,370.177L1042.153,369.571L1042.153,305.182L1084.911,305.791Z" id="19097" class="region" data-id="19097" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1032.58,601.825L1030.027,632.853L1001.947,688.789L954.721,665.011L956.636,602.423Z" id="19057" class="region" data-id="19057" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1010.243,537.188L1008.967,574.327L1032.58,601.825L956.636,602.423L935.576,580.907L936.214,517.985L956.636,517.985L956.636,538.987Z" id="19115" class="region" data-id="19115" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1062.574,512.58L1025.56,515.583L1010.243,537.188L956.636,538.987L956.636,517.985L957.274,475.294L1042.153,475.896Z" id="19139" class="region" data-id="19139" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1149.367,440.334L1125.116,489.136L1062.574,512.58L1042.153,475.896L1042.153,433.695L1113.629,429.468Z" id="19163" class="region" data-id="19163" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1161.493,427.656L1149.367,440.334L1113.629,429.468L1042.153,433.695L1042.153,390.773L1042.153,369.571L1180,370.177L1174.895,395.01Z" id="19045" class="region" data-id="19045" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M435.241,498.758L435.241,582.103L393.759,582.103L351.639,582.103L351.639,498.157Z" id="19001" class="region" data-id="19001" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M435.241,582.103L435.241,498.758L516.928,496.353L517.566,580.907L476.723,582.701Z" id="19121" class="region" data-id="19121" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M393.759,582.103L435.241,582.103L476.723,582.701L476.084,644.771L393.759,644.175Z" id="19175" class="region" data-id="19175" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M351.639,582.103L393.759,582.103L393.759,644.175L310.157,644.175L310.795,582.103Z" id="19003" class="region" data-id="19003" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M351.639,498.157L351.639,582.103L310.795,582.103L269.313,582.103L269.313,498.157L290.373,498.157Z" id="19029" class="region" data-id="19029" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M435.241,498.758L351.639,498.157L343.981,411.342L365.041,411.342L428.221,411.342Z" id="19077" class="region" data-id="19077" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M310.795,582.103L310.157,644.175L227.831,643.58L227.831,581.505L269.313,582.103Z" id="19137" class="region" data-id="19137" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M726.252,644.771L642.65,644.771L642.65,581.505L684.132,581.505L726.252,581.505Z" id="19135" class="region" data-id="19135" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M343.981,411.342L351.639,498.157L290.373,498.157L280.8,474.692L280.8,411.342Z" id="19009" class="region" data-id="19009" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M280.8,411.342L280.8,474.692L290.373,498.157L269.313,498.157L206.771,498.157L195.922,474.692L196.56,410.737Z" id="19165" class="region" data-id="19165" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M343.981,411.342L280.8,411.342L280.8,326.472L322.92,326.472L365.041,326.472L365.041,411.342Z" id="19027" class="region" data-id="19027" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M873.034,411.342L788.156,411.342L788.156,304.573L830.276,305.182L873.034,304.573Z" id="19011" class="region" data-id="19011" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M788.156,411.342L873.034,411.342L873.034,496.353L851.974,496.955L788.156,496.955Z" id="19095" class="region" data-id="19095" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M788.156,304.573L788.156,411.342L703.277,411.342L702.639,326.472L745.398,305.182Z" id="19171" class="region" data-id="19171" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M830.276,305.182L788.156,304.573L745.398,305.182L741.568,241.135L741.568,219.726L827.723,219.726Z" id="19013" class="region" data-id="19013" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M873.034,304.573L830.276,305.182L827.723,219.726L913.878,219.726L915.154,305.182Z" id="19019" class="region" data-id="19019" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M873.034,411.342L873.034,304.573L915.154,305.182L957.912,305.182L957.274,390.773L957.274,411.946Z" id="19113" class="region" data-id="19113" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M741.568,241.135L745.398,305.182L702.639,326.472L660.519,326.472L656.052,241.135Z" id="19075" class="region" data-id="19075" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M741.568,219.726L741.568,241.135L656.052,241.135L656.052,154.092L741.568,154.707Z" id="19023" class="region" data-id="19023" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M827.723,219.726L741.568,219.726L741.568,154.707L827.723,154.707Z" id="19017" class="region" data-id="19017" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M491.401,326.472L533.521,326.472L534.159,411.342L512.461,410.737L449.281,411.342L449.281,326.472Z" id="19015" class="region" data-id="19015" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M533.521,326.472L491.401,326.472L484.381,240.524L569.897,240.524L576.279,326.472Z" id="19079" class="region" data-id="19079" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M534.159,411.342L533.521,326.472L576.279,326.472L618.399,326.472L618.399,411.342L597.339,411.342Z" id="19169" class="region" data-id="19169" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M512.461,410.737L534.159,411.342L597.339,411.342L601.168,497.556L601.168,501.764L516.928,496.353Z" id="19153" class="region" data-id="19153" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M449.281,411.342L512.461,410.737L516.928,496.353L435.241,498.758L428.221,411.342Z" id="19049" class="region" data-id="19049" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M449.281,326.472L449.281,411.342L428.221,411.342L365.041,411.342L365.041,326.472L407.161,326.472Z" id="19073" class="region" data-id="19073" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M491.401,326.472L449.281,326.472L407.161,326.472L398.864,240.524L398.864,219.114L484.381,219.114L484.381,240.524Z" id="19187" class="region" data-id="19187" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M827.723,219.726L827.723,154.707L827.723,111.001L913.878,111.001L913.878,219.726Z" id="19065" class="region" data-id="19065" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M827.723,154.707L741.568,154.707L741.568,78.293L827.723,78.293L827.723,111.001Z" id="19037" class="region" data-id="19037" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M915.154,305.182L913.878,219.726L1000.032,219.114L1000.032,305.182L957.912,305.182Z" id="19055" class="region" data-id="19055" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M313.348,153.477L312.71,239.912L227.193,239.912L227.193,153.477Z" id="19021" class="region" data-id="19021" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M312.71,239.912L313.348,153.477L398.864,154.092L398.864,219.114L398.864,240.524Z" id="19151" class="region" data-id="19151" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M227.193,239.912L312.71,239.912L323.559,261.293L322.92,326.472L280.8,326.472L238.68,325.864L238.68,261.293Z" id="19161" class="region" data-id="19161" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M227.193,153.477L227.193,239.912L162.737,239.912L141.038,239.912L141.677,154.092Z" id="19035" class="region" data-id="19035" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M313.348,153.477L227.193,153.477L227.193,67.787L313.348,67.787Z" id="19041" class="region" data-id="19041" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M656.052,154.092L656.052,241.135L569.897,240.524L569.897,154.092Z" id="19069" class="region" data-id="19069" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M741.568,154.707L656.052,154.092L656.052,78.293L741.568,78.293Z" id="19067" class="region" data-id="19067" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M365.041,326.472L322.92,326.472L323.559,261.293L312.71,239.912L398.864,240.524L407.161,326.472Z" id="19025" class="region" data-id="19025" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M280.8,326.472L280.8,411.342L196.56,410.737L175.5,411.342L175.5,325.864L238.68,325.864Z" id="19047" class="region" data-id="19047" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1042.153,390.773L1042.153,433.695L1042.153,475.896L957.274,475.294L957.274,411.946L957.274,390.773Z" id="19031" class="region" data-id="19031" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M957.274,411.946L957.274,475.294L956.636,517.985L936.214,517.985L929.194,496.955L873.034,496.353L873.034,411.342Z" id="19103" class="region" data-id="19103" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M1042.153,390.773L957.274,390.773L957.912,305.182L1000.032,305.182L1042.153,305.182L1042.153,369.571Z" id="19105" class="region" data-id="19105" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M656.052,67.787L656.052,78.293L656.052,154.092L569.897,154.092L570.535,67.787Z" id="19033" class="region" data-id="19033" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M570.535,67.787L569.897,154.092L484.381,154.092L484.381,67.787Z" id="19081" class="region" data-id="19081" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M162.737,239.912L227.193,239.912L238.68,261.293L238.68,325.864L175.5,325.864L176.138,261.293Z" id="19093" class="region" data-id="19093" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M227.193,153.477L141.677,154.092L141.038,67.169L227.193,67.787Z" id="19141" class="region" data-id="19141" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M559.686,581.505L559.686,644.771L476.084,644.771L476.723,582.701L517.566,580.907Z" id="19039" class="region" data-id="19039" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M559.686,644.771L559.686,581.505L601.168,581.505L642.65,581.505L642.65,644.771Z" id="19117" class="region" data-id="19117" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M559.686,581.505L517.566,580.907L516.928,496.353L601.168,501.764L601.168,581.505Z" id="19181" class="region" data-id="19181" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M313.348,153.477L313.348,67.787L398.864,67.787L398.864,154.092Z" id="19147" class="region" data-id="19147" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M809.854,644.175L726.252,644.771L726.252,581.505L767.734,580.907L809.854,580.907Z" id="19179" class="region" data-id="19179" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M956.636,602.423L954.721,665.011L893.456,665.011L893.456,644.175L894.094,580.907L935.576,580.907Z" id="19087" class="region" data-id="19087" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M569.897,240.524L656.052,241.135L660.519,326.472L618.399,326.472L576.279,326.472Z" id="19083" class="region" data-id="19083" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M569.897,154.092L569.897,240.524L484.381,240.524L484.381,219.114L484.381,154.092Z" id="19197" class="region" data-id="19197" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M660.519,326.472L702.639,326.472L703.277,411.342L618.399,411.342L618.399,326.472Z" id="19127" class="region" data-id="19127" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M894.094,580.907L893.456,644.175L809.854,644.175L809.854,580.907L851.974,580.907Z" id="19101" class="region" data-id="19101" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M935.576,580.907L894.094,580.907L851.974,580.907L851.974,496.955L873.034,496.353L929.194,496.955L936.214,517.985Z" id="19183" class="region" data-id="19183" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M484.381,154.092L484.381,219.114L398.864,219.114L398.864,154.092Z" id="19091" class="region" data-id="19091" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M788.156,496.955L851.974,496.955L851.974,580.907L809.854,580.907L767.734,580.907L767.734,496.955Z" id="19107" class="region" data-id="19107" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M788.156,411.342L788.156,496.955L767.734,496.955L705.192,497.556L703.277,411.342Z" id="19157" class="region" data-id="19157" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M618.399,411.342L703.277,411.342L705.192,497.556L684.132,497.556L601.168,497.556L597.339,411.342Z" id="19099" class="region" data-id="19099" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M684.132,497.556L705.192,497.556L767.734,496.955L767.734,580.907L726.252,581.505L684.132,581.505Z" id="19123" class="region" data-id="19123" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M601.168,497.556L684.132,497.556L684.132,581.505L642.65,581.505L601.168,581.505L601.168,501.764Z" id="19125" class="region" data-id="19125" fill="#FFFAEC" stroke="transparent" stroke-width="0"></path>
+              <path d="M215.068,6.46L227.193,6.46L312.71,6.46L323.559,6.46L398.864,6.46L433.964,6.46L484.381,6.46L543.094,6.46L570.535,6.46L651.585,6.46L656.052,6.46L742.207,6.46L760.714,6.46L827.723,6.46L890.903,6.46L913.24,6.46L978.334,6.46L983.44,26.31L1008.329,61.604L994.927,111.617L996.203,129.484L1009.605,182.957L1042.791,208.092L1077.891,216.666L1088.74,252.133L1119.373,284.472L1146.814,328.903L1180,370.177L1174.895,395.01L1161.493,427.656L1149.367,440.334L1125.116,489.136L1062.574,512.58L1025.56,515.583L1010.243,537.188L1008.967,574.327L1032.58,601.825L1030.027,632.853L1001.947,688.789L989.822,703.633L954.083,716.683L943.872,768.781L890.903,711.346L852.612,714.904L809.854,715.497L779.221,716.09L726.252,717.869L711.574,718.462L643.288,720.834L592.872,720.241L558.41,719.648L520.119,720.834L476.084,722.019L437.155,722.612L392.482,722.612L364.402,722.019L311.433,720.834L261.017,719.055L229.746,717.869L158.269,716.09L145.506,671.553L147.42,643.58L139.762,607.797L138.486,606.603L138.486,579.711L134.657,573.728L132.104,573.13L126.998,525.188L116.149,495.752L97.642,454.81L90.622,408.923L70.2,365.327L52.331,327.08L54.884,310.051L28.08,250.301L26.804,238.69L0,192.771L17.869,154.092L29.995,114.083L14.678,67.787L54.884,67.169L14.678,67.169L7.02,7.702L33.186,6.46L105.938,6.46L141.038,6.46Z" class="boundary" pointer-events="none" fill="transparent" stroke="#BCB58E" stroke-width="1" stroke-opacity="1" stroke-linejoin="bevel"></path>
+              <g id="um-layer-map-labels"></g>
+              <g id="um-layer-map-points"></g>
+            </g>
+            <g id="arcs"></g>
+          </g>
+        </svg>
+    </div>
+
+    <div class="textWrapper">
+        <h2>Conclusion</h2>
+        <p>
+            Housing affordability is not a single data point—it is a moving relationship between incomes, costs, and access. When wages fail to keep pace with rising home prices and rents, the strain shows up in everyday decisions: smaller living spaces, longer commutes, delayed savings, and difficult trade-offs. At the same time, the structure of housing supply—how many units are truly available, where they are located, and who can afford them—shapes which communities remain accessible and which become out of reach.
+        </p>
+      
+        <p>
+            Looking at income trends, vacancy patterns, and cross-county spillovers together reveals a housing system that is deeply interconnected. Pressures in one place do not stay contained; they shift, ripple, and often intensify elsewhere. Addressing affordability therefore requires more than tracking prices alone. It demands attention to regional dynamics, housing availability, and the lived realities of households navigating an increasingly competitive market. Understanding these patterns is a first step toward building communities where opportunity is not defined by the ability to absorb rising costs—but by the ability to thrive within them.
+        </p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/GSDevTools.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script type="module" src="bars.js"></script>
+    <script type="module" src="housingUnits.js"></script>
+    <script type="module" src="IAMap.js"></script>    
+</body>
+</html>
