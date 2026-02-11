@@ -12,8 +12,8 @@ gsap.timeline({
     defaults:{},
     scrollTrigger:{
         trigger:"#svgAffordWrapper",
-        start:"top 50%",
-        end:"bottom 80%",
+        start:"top-=600",
+        end:"bottom+=200 100%",
         scrub:3,
         // markers:true,
         pinSpacing:true
@@ -22,4 +22,5 @@ gsap.timeline({
     .fromTo(medIncomeRect, {attr: {width:0}}, {attr: {width:35}, ease:"back.out(4)"})
     .fromTo(medHouseValueRect, {attr: {x:100}}, {attr: {x:55}, ease:"back.out(4)"}, "<")
     .fromTo(rectLabels, {opacity:0, scale:0.7}, {opacity:1, scale:1})
+
     .from(gapLabels, {attr: {x:20}, opacity:0}, "<-.2")
