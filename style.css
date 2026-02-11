@@ -42,14 +42,17 @@ p {
     max-width: 720px;
 }
 
-/* FIRST CHART */
+/* All Charts */
 
-#svgAffordWrapper {
+#svgAffordWrapper, #svgUnitsWrapper, #svgMapWrapper{
     display: grid;
     justify-self: center;
     /* background-color: var(--isu-beige-3); */
-    width: 40vw;
+    width: 100%;
+    max-width: 730px;
 }
+
+/* FIRST CHART */
 
 svg {
     width: 100%;
@@ -77,13 +80,6 @@ svg {
 
 /* SECOND CHART */
 
-#svgUnitsWrapper {
-    display: grid;
-    justify-self: center;
-    /* background-color: var(--isu-beige-3); */
-    width: 40vw;
-}
-
 #signage {
     cursor: pointer;
 }
@@ -91,15 +87,9 @@ svg {
 
 /* THIRD CHART */
 
-#svgMapWrapper {
-    display: grid;
-    justify-self: center;
-    /* background-color: var(--isu-beige-3); */
-    width: 40vw;
-}
-
 .arc, .shadow {
     pointer-events: none;
 }
+
 
 
