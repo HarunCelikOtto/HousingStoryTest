@@ -48,7 +48,7 @@ p {
     display: grid;
     justify-self: center;
     /* background-color: var(--isu-beige-3); */
-    width: 50vw;
+    width: 40vw;
 }
 
 svg {
@@ -81,7 +81,7 @@ svg {
     display: grid;
     justify-self: center;
     /* background-color: var(--isu-beige-3); */
-    width: 50vw;
+    width: 40vw;
 }
 
 #signage {
@@ -95,10 +95,11 @@ svg {
     display: grid;
     justify-self: center;
     /* background-color: var(--isu-beige-3); */
-    width: 50vw;
+    width: 40vw;
 }
 
 .arc, .shadow {
     pointer-events: none;
 }
+
 
